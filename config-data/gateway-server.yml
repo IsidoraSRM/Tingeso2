@@ -52,3 +52,7 @@ spring:
           uri: lb://ms6
           predicates:
             - Path=/api/racks/**
+        - id: ms7
+          uri: lb://ms7
+          predicates:
+            - Path=/api/reports/**
