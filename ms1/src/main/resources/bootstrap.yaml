@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ms1
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms1db
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+# Database connection
+#spring.jpa.hibernate.ddl-auto=update
+#spring.datasource.url=jdbc:postgresql://localhost:5432/ms1db
+#spring.datasource.username=postgres
+#spring.datasource.password=123456
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#
+## JPA properties
+#spring.jpa.show-sql=true
