@@ -30,25 +30,9 @@ const getCustomersByReservationId = (id) => {
 const sendConfirmationEmail = (id) => {
   return httpClient.post(`/reservations/sendMail/${id}`);
 };
-// Obtener reporte de vueltas/tiempo para un rango de fechas
-const getLapsTimeReport = (startDate, endDate) => {
-  return httpClient.get("/reservations/reports/laps-time", {
-    params: {
-      startDate: startDate,
-      endDate: endDate
-    }
-  });
-};
 
-// Obtener reporte por tamaño de grupo para un rango de fechas
-const getGroupSizeReport = (startDate, endDate) => {
-  return httpClient.get("/reservations/reports/group-size", {
-    params: {
-      startDate: startDate,
-      endDate: endDate
-    }
-  });
-};
+
+
 
 export default { 
   getAll, 
@@ -56,7 +40,5 @@ export default {
   createWithPricing, 
   getReservationWithPricing, 
   getCustomersByReservationId, 
-  sendConfirmationEmail,
-  getLapsTimeReport,
-  getGroupSizeReport
+  sendConfirmationEmail
 };

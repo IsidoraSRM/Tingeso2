@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.YearMonth;
 
 @Data
@@ -17,10 +18,12 @@ public class ReportEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idReport;
+    private String reportType;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Double grandTotal;
+    @Column(columnDefinition = "TEXT")
+    private String reportData;  // Almacenará el JSON del reporte
 
-    private String reportType; // "lapsTime" o "groupSize"
-    private YearMonth month;
-    private String category;   // Ej: "10 vueltas", "3-5 personas"
-    private Double totalAmount;
 
 }

@@ -8,7 +8,7 @@ import {
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate } from 'react-router-dom';
-import reservationService from '../../services/reservation'; 
+import reservationService from '../../services/reports'; 
 
 const LapsReport = () => {
   const location = useLocation();

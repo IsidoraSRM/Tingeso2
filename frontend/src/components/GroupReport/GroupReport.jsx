@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import reservationService from '../../services/reservation';
+import reservationService from '../../services/reports';
 import {
   Paper, Typography, Box, Table, TableBody, TableCell, TableContainer,
   TableHead, TableRow, CircularProgress, Button, Grid
@@ -27,7 +27,7 @@ const GroupReport = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await reservationService.getLapsTimeReport(startDate, endDate);
+      const response = await reservationService.getGroupSizeReport(startDate, endDate);
       setReportData(response.data);
     } catch (err) {
       console.error('Error al obtener el reporte:', err);
