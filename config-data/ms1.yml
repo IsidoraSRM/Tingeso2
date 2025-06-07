@@ -1,9 +1,4 @@
 spring:
-  application:
-    name: ms1
-server:
-  port: ${PORT:0}
-spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/ms1db
     username: postgres
@@ -12,11 +7,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
     properties:
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate.format_sql: true
-    show-sql: true
-
+server:
+  port: ${PORT:0}
 eureka:
   client:
     fetch-registry: true
