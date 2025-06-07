@@ -4,20 +4,19 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8081
+      uri: http://config-server:8081  # Cambiado
   datasource:
-    url: jdbc:postgresql://localhost:5432/ms1db
+    url: jdbc:postgresql://postgres:5432/ms1db  # Cambiado
     username: postgres
     password: 123456
   jpa:
     hibernate:
       ddl-auto: update
-# Database connection
-#spring.jpa.hibernate.ddl-auto=update
-#spring.datasource.url=jdbc:postgresql://localhost:5432/ms1db
-#spring.datasource.username=postgres
-#spring.datasource.password=123456
-#spring.datasource.driver-class-name=org.postgresql.Driver
-#
-## JPA properties
-#spring.jpa.show-sql=true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: gateway-server

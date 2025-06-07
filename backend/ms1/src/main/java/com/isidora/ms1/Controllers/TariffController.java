@@ -14,7 +14,7 @@ import com.isidora.ms1.Entities.TariffEntity;
 import com.isidora.ms1.Services.TariffService;
 
 @RestController
-@RequestMapping("api/tariffs")
+@RequestMapping("/api/tariffs")
 
 public class TariffController {
     @Autowired
@@ -40,7 +40,10 @@ public class TariffController {
     public TariffEntity getTariffEntityByDate(@RequestParam LocalDate date, @RequestParam Integer laps){
         return tariffService.getTariffEntityByDate(date, laps);
     }
-
+    @GetMapping("/test")
+    public String test() {
+        return "MS1 Tariff Service is working!";
+    }
 
     
 

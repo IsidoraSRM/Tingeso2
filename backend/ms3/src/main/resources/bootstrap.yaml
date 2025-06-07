@@ -4,9 +4,9 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8081
+      uri: http://config-server:8888  # Cambiado
   datasource:
-    url: jdbc:postgresql://localhost:5432/ms3db
+    url: jdbc:postgresql://postgres:5432/ms3db  # Cambiado
     username: postgres
     password: 123456
   jpa:
