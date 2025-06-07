@@ -4,11 +4,14 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://config-server:8888  # Cambiado
-  datasource:
-    url: jdbc:postgresql://postgres:5432/ms7db  # Cambiado
-    username: postgres
-    password: 123456
-  jpa:
-    hibernate:
-      ddl-auto: update
+      uri: http://config-server:8081
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+  instance:
+    prefer-ip-address: true
+    # hostname: (elimínalo)
