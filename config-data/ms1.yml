@@ -1,3 +1,7 @@
+# filepath: c:\Users\Public\Desktop\Tingeso2\config-data\ms1.yml
+spring:
+  application:
+    name: ms1         # <— obligatorio para que Eureka lo registre como “ms1”
 server:
   port: ${PORT:${SERVER_PORT:0}}
 eureka:
@@ -7,4 +11,4 @@ eureka:
     service-url:
       defaultZone: http://eureka-server:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.application.name}:${random.value}
