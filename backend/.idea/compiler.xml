@@ -2,26 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="config-server" />
-        <module name="eureka-server" />
-        <module name="gateway-server" />
-      </profile>
-      <profile name="Annotation profile for ms3" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
-        </processorPath>
-        <module name="ms1" />
-        <module name="ms3" />
-        <module name="ms2" />
-      </profile>
       <profile name="Annotation profile for ms7" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -31,8 +11,19 @@
         </processorPath>
         <module name="ms7" />
         <module name="ms6" />
+        <module name="ms1" />
+        <module name="ms3" />
+        <module name="ms2" />
         <module name="ms5" />
         <module name="ms4" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="gateway-server" />
       </profile>
     </annotationProcessing>
   </component>
