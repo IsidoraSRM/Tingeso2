@@ -24,7 +24,7 @@ spring:
             allowCredentials: true
       routes:
         - id: ms1
-          uri: lb://ms1
+          uri: lb://MS1
           predicates:
             - Path=/api/tariffs/**
         - id: ms2
