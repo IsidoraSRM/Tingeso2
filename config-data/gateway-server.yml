@@ -9,8 +9,8 @@ eureka:
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
   instance:
-    preferIpAddress: false
-    hostname: gateway-server
+    preferIpAddress: true    # Change to true
+    hostname: ${spring.application.name}
 
 spring:
   cloud:
