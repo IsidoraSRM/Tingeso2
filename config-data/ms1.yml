@@ -1,9 +1,21 @@
-# filepath: c:\Users\Public\Desktop\Tingeso2\config-data\ms1.yml
 spring:
   application:
-    name: ms1         # <— obligatorio para que Eureka lo registre como “ms1”
+    name: ms1
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: ${PORT:0}
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/ms1db
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.format_sql: true
+    show-sql: true
+
 eureka:
   client:
     fetch-registry: true
