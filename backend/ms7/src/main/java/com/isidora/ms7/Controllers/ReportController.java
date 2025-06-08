@@ -44,6 +44,11 @@ public class ReportController {
         }
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "MS7 Reports Service is working!";
+    }
+
 
 
 }
