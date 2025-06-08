@@ -178,18 +178,10 @@ services:
     build: ./frontend
     container_name: frontend
     ports:
-      - "3000:80"
-    depends_on:
-      gateway-server:
-        condition: service_healthy
+      - "5173:80"
     networks:
       - tingeso-net
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/actuator/health || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 15s
+
 
   postgres:
     image: postgres:16
