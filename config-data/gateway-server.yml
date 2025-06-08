@@ -2,6 +2,12 @@ server:
   port: 8080
   max-http-header-size: 16384
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
 eureka:
   client:
     fetch-registry: true
