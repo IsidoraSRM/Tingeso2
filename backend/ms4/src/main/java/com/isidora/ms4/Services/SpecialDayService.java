@@ -30,7 +30,11 @@ public class SpecialDayService {
             maxDiscounts = 1;
         } else if (birthdays.size() >= 6 && birthdays.size() <= 10) {
             maxDiscounts = 2;
-        } else {
+        } else if (birthdays.size() <= 3){
+            maxDiscounts = 1;
+            System.out.println("grupos de 1 a 2 un cumpleañero con descuento");
+        }
+        else {
             maxDiscounts = 0;
         }
 
